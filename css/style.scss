@@ -2,6 +2,7 @@
 :root{
     --primiary-color: rgb(23, 201, 147);
     --primiary-font-color: rgb(0,0,0);
+    --primiary-margin:5em;
     
 }
 *{
@@ -53,32 +54,41 @@
 }
 header {
     display: flex;
-    padding: 1em 5em;
+    padding: 1em var(--primiary-margin);
 }
 .logo {
-    flex: 2;
+    flex: 1;
 }
 .menu {
-    flex: 4;
+    flex: 5;
     display: block;
 }
 .search {
-    width: 60%;
+    width: 55%;
     float: left;
 }
 .form-search{
     margin: 0 0 0 30%;
     input {
         height: 2.5em;
-        width: 75%;
+        width: calc(100% - 2.5em);
         background: #d1c9c987;
         padding: 0.9em;
         font-size: 1.09rem;
+        border-top-left-radius:0.2em ;
+        border-bottom-left-radius:0.2em ;
+        border: 1px solid #d1c9c9bd;
+        outline: none;
     }
     button {
         height: 2.5em;
         width: 2.5em;
         font-size: 1.09rem;
+        border-radius: 0;
+        border: 1px solid #d1c9c9bd;
+        border-top-right-radius:0.2em ;
+        border-bottom-right-radius:0.2em ;
+        outline: none;
     }
 }
 nav {
@@ -102,9 +112,12 @@ nav {
     }
 }
 .banner{
-    margin: 0 5em;
     display: flex;
     gap: 2em;
+}
+.banner,.buy-sell,.features-product,.brands{
+    padding-left: var(--primiary-margin);
+    padding-right: var(--primiary-margin);
 }
 .banner-containor{
     width: 45%;
@@ -117,7 +130,8 @@ nav {
 }
 .buy-sell{
     display: flex;
-    margin: 5em;
+    margin-top: 5em;
+    margin-bottom: 5em;
     gap: 1em;
 }
 .buy,.sell {
@@ -173,3 +187,116 @@ nav {
     }
     
 }
+
+.brand-main {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0.5em -0.5em;
+}
+.brand {
+    
+    margin: 0.5em 0;
+    padding: 0.5em;
+    a{
+        display: inline-block;
+        border: 1px solid #585854;
+        border-radius: 0.25em;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+.spacer{
+    aspect-ratio: 960/300;
+    width: 100%;
+    
+}
+.layer2{
+    background: url('../Image/SVG/layered-waves-haikei.svg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+footer{
+    background: #ffeecd;
+}
+
+.footer-logo{
+    padding: 0 var(--primiary-margin);
+    img{
+        width: 300px;
+    }
+}
+.footer-body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1em var(--primiary-margin);
+     ul{
+        list-style: none;
+        margin: 0.5em 0;
+        padding: 0;
+        > li{
+            margin: 0 0 0.5em 0;
+            > a{
+                text-decoration: none;
+                color: #585854;
+            } 
+        } 
+    }
+}
+.social{
+    ul{
+        display: flex;
+        justify-content: space-between;
+        gap: 1em;
+        .fab {
+            border: 1px solid;
+            padding: 0.5em;
+            border-radius: 50%;
+            height: 2em;
+            width: 2em;
+            text-align: center;
+            line-height: 0.8em;
+        }
+    }
+}
+.newletter {
+    flex-basis: 35%;
+    > form {
+        input[type="text"]{
+            width: 100%;
+            line-height: 2em;
+            padding: 0px 5px;
+            margin: 0.5em 0;
+            height: 3em;
+        }
+        input[type="submit"] {
+            width: max-content;
+            padding: 0.8em 0.9em;
+            float: right;
+            background-color: red;
+            border: 1px solid red;
+            color: #fff;
+        }
+    }
+}
+.footer-copyright {
+    text-align: center;
+    background: #585854;
+    color: #fff;
+    padding: 0.5em 1em;
+    font-size: 0.9em;
+}
+@media screen and (max-width:576px) {
+    header{
+        display: block ;
+    }
+    .search {
+        width: 100%;
+    }
+    .form-search {
+        margin: 2em 0;
+    }
+}
+@import url('screen-media.css');

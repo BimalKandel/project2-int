@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap");
+@import url("screen-media.css");
 :root {
   --primiary-color: rgb(23, 201, 147);
   --primiary-font-color: rgb(0,0,0);
+  --primiary-margin:5em;
 }
 
 * {
@@ -64,24 +66,24 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 1em 5em;
+  padding: 1em var(--primiary-margin);
 }
 
 .logo {
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .menu {
-  -webkit-box-flex: 4;
-      -ms-flex: 4;
-          flex: 4;
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
   display: block;
 }
 
 .search {
-  width: 60%;
+  width: 55%;
   float: left;
 }
 
@@ -91,16 +93,25 @@ header {
 
 .form-search input {
   height: 2.5em;
-  width: 75%;
+  width: calc(100% - 2.5em);
   background: #d1c9c987;
   padding: 0.9em;
   font-size: 1.09rem;
+  border-top-left-radius: 0.2em;
+  border-bottom-left-radius: 0.2em;
+  border: 1px solid #d1c9c9bd;
+  outline: none;
 }
 
 .form-search button {
   height: 2.5em;
   width: 2.5em;
   font-size: 1.09rem;
+  border-radius: 0;
+  border: 1px solid #d1c9c9bd;
+  border-top-right-radius: 0.2em;
+  border-bottom-right-radius: 0.2em;
+  outline: none;
 }
 
 nav {
@@ -131,11 +142,15 @@ nav ul > li > a:hover {
 }
 
 .banner {
-  margin: 0 5em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 2em;
+}
+
+.banner, .buy-sell, .features-product, .brands {
+  padding-left: var(--primiary-margin);
+  padding-right: var(--primiary-margin);
 }
 
 .banner-containor {
@@ -154,7 +169,8 @@ nav ul > li > a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 5em;
+  margin-top: 5em;
+  margin-bottom: 5em;
   gap: 1em;
 }
 
@@ -228,5 +244,144 @@ nav ul > li > a:hover {
   -webkit-transform: scale(1.7);
           transform: scale(1.7);
   border-color: #fff;
+}
+
+.brand-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0.5em -0.5em;
+}
+
+.brand {
+  margin: 0.5em 0;
+  padding: 0.5em;
+}
+
+.brand a {
+  display: inline-block;
+  border: 1px solid #585854;
+  border-radius: 0.25em;
+}
+
+.brand a img {
+  width: 100%;
+  height: auto;
+}
+
+.spacer {
+  aspect-ratio: 960/300;
+  width: 100%;
+}
+
+.layer2 {
+  background: url("../Image/SVG/layered-waves-haikei.svg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+footer {
+  background: #ffeecd;
+}
+
+.footer-logo {
+  padding: 0 var(--primiary-margin);
+}
+
+.footer-logo img {
+  width: 300px;
+}
+
+.footer-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1em var(--primiary-margin);
+}
+
+.footer-body ul {
+  list-style: none;
+  margin: 0.5em 0;
+  padding: 0;
+}
+
+.footer-body ul > li {
+  margin: 0 0 0.5em 0;
+}
+
+.footer-body ul > li > a {
+  text-decoration: none;
+  color: #585854;
+}
+
+.social ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1em;
+}
+
+.social ul .fab {
+  border: 1px solid;
+  padding: 0.5em;
+  border-radius: 50%;
+  height: 2em;
+  width: 2em;
+  text-align: center;
+  line-height: 0.8em;
+}
+
+.newletter {
+  -ms-flex-preferred-size: 35%;
+      flex-basis: 35%;
+}
+
+.newletter > form input[type="text"] {
+  width: 100%;
+  line-height: 2em;
+  padding: 0px 5px;
+  margin: 0.5em 0;
+  height: 3em;
+}
+
+.newletter > form input[type="submit"] {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0.8em 0.9em;
+  float: right;
+  background-color: red;
+  border: 1px solid red;
+  color: #fff;
+}
+
+.footer-copyright {
+  text-align: center;
+  background: #585854;
+  color: #fff;
+  padding: 0.5em 1em;
+  font-size: 0.9em;
+}
+
+@media screen and (max-width: 576px) {
+  header {
+    display: block;
+  }
+  .search {
+    width: 100%;
+  }
+  .form-search {
+    margin: 2em 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */
