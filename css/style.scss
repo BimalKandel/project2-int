@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap');
+:root{
+    --primiary-color: rgb(23, 201, 147);
+    --primiary-font-color: rgb(0,0,0);
+    
+}
+*{
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.top{
+    width: 100%;
+    min-height: 100vh;
+    background: url('../Image/SVG/Main.svg') no-repeat;
+    background-size: cover;
+    position: relative;
+}
+#right-backgorund-element {
+    position: absolute;
+    width: 10%;
+    right: 0;
+    top: 60%;
+}
+.custom-shape-divider-bottom-1629093722 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    svg {
+        position: relative;
+        display: block;
+        width: calc(126% + 1.3px);
+        height: 190px;
+    }
+    .shape-fill {
+        fill: #FFFFFF;
+    }
+}
+.right-more{
+    text-decoration: none;
+    position: absolute;
+    width: 7%;
+    right: 0;
+    top: 74%;
+    font-size: 1.5em;
+    text-align: center;
+    z-index: 14;
+}
+header {
+    display: flex;
+    padding: 1em 5em;
+}
+.logo {
+    flex: 2;
+}
+.menu {
+    flex: 4;
+    display: block;
+}
+.search {
+    width: 60%;
+    float: left;
+}
+.form-search{
+    margin: 0 0 0 30%;
+    input {
+        height: 2.5em;
+        width: 75%;
+        background: #d1c9c987;
+        padding: 0.9em;
+        font-size: 1.09rem;
+    }
+    button {
+        height: 2.5em;
+        width: 2.5em;
+        font-size: 1.09rem;
+    }
+}
+nav {
+    width: max-content;
+    float: right;
+    ul{
+        display: flex;
+        list-style: none;
+        > li > a{
+            padding: 0 1em;
+            line-height: 2.5em;
+            display: inline-block;
+            cursor: pointer;
+            text-decoration: none;
+
+            &:hover{
+                background-color: red;
+                color: #fff;
+            }
+        }
+    }
+}
+.banner{
+    margin: 0 5em;
+    display: flex;
+    gap: 2em;
+}
+.banner-containor{
+    width: 45%;
+}
+.banner-image{
+    width: 50%;
+    > img{
+        width: 100%;
+    }
+}
+.buy-sell{
+    display: flex;
+    margin: 5em;
+    gap: 1em;
+}
+.buy,.sell {
+    width: 50%;
+    text-align: center;
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 4px 3px 4px rgba(48, 39, 37, 0.4);
+    &::after{
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+    }
+}
+
+.buy{
+    background: url('../Image/buy.jpg') no-repeat;
+    background-size: cover;
+    border: 1px solid rgba(255,0,0,0.6);
+    &::after{
+        background-color: rgba(255,0,0,0.45);
+    }
+}
+.sell{
+    background: url('../Image/sell.jpg') no-repeat;
+    background-size: cover;
+    border: 1px solid rgba(255,165,0,0.6);
+    &::after{
+        background-color: rgba(255,165,0,0.45);
+    }
+
+}
+.btn-large{
+    text-decoration: none;
+    font-size: 2em;
+    color: #fff;
+    transition: transform 400ms ease-in, border-color 300ms linear;
+    z-index: 14;
+    border: 1px solid transparent;
+    width: max-content;
+    margin: 0 auto;
+    padding: 0.5em;
+    &:hover {
+        transform: scale(1.7) ;
+        border-color: #fff;
+        
+    }
+    
+}

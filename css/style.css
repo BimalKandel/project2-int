@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap");
+:root {
+  --primiary-color: rgb(23, 201, 147);
+  --primiary-font-color: rgb(0,0,0);
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.top {
+  width: 100%;
+  min-height: 100vh;
+  background: url("../Image/SVG/Main.svg") no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+#right-backgorund-element {
+  position: absolute;
+  width: 10%;
+  right: 0;
+  top: 60%;
+}
+
+.custom-shape-divider-bottom-1629093722 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1629093722 svg {
+  position: relative;
+  display: block;
+  width: calc(126% + 1.3px);
+  height: 190px;
+}
+
+.custom-shape-divider-bottom-1629093722 .shape-fill {
+  fill: #FFFFFF;
+}
+
+.right-more {
+  text-decoration: none;
+  position: absolute;
+  width: 7%;
+  right: 0;
+  top: 74%;
+  font-size: 1.5em;
+  text-align: center;
+  z-index: 14;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1em 5em;
+}
+
+.logo {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+.menu {
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+  display: block;
+}
+
+.search {
+  width: 60%;
+  float: left;
+}
+
+.form-search {
+  margin: 0 0 0 30%;
+}
+
+.form-search input {
+  height: 2.5em;
+  width: 75%;
+  background: #d1c9c987;
+  padding: 0.9em;
+  font-size: 1.09rem;
+}
+
+.form-search button {
+  height: 2.5em;
+  width: 2.5em;
+  font-size: 1.09rem;
+}
+
+nav {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  float: right;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+nav ul > li > a {
+  padding: 0 1em;
+  line-height: 2.5em;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+nav ul > li > a:hover {
+  background-color: red;
+  color: #fff;
+}
+
+.banner {
+  margin: 0 5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2em;
+}
+
+.banner-containor {
+  width: 45%;
+}
+
+.banner-image {
+  width: 50%;
+}
+
+.banner-image > img {
+  width: 100%;
+}
+
+.buy-sell {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 5em;
+  gap: 1em;
+}
+
+.buy, .sell {
+  width: 50%;
+  text-align: center;
+  min-height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  -webkit-box-shadow: 4px 3px 4px rgba(48, 39, 37, 0.4);
+          box-shadow: 4px 3px 4px rgba(48, 39, 37, 0.4);
+}
+
+.buy::after, .sell::after {
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.buy {
+  background: url("../Image/buy.jpg") no-repeat;
+  background-size: cover;
+  border: 1px solid rgba(255, 0, 0, 0.6);
+}
+
+.buy::after {
+  background-color: rgba(255, 0, 0, 0.45);
+}
+
+.sell {
+  background: url("../Image/sell.jpg") no-repeat;
+  background-size: cover;
+  border: 1px solid rgba(255, 165, 0, 0.6);
+}
+
+.sell::after {
+  background-color: rgba(255, 165, 0, 0.45);
+}
+
+.btn-large {
+  text-decoration: none;
+  font-size: 2em;
+  color: #fff;
+  -webkit-transition: border-color 300ms linear, -webkit-transform 400ms ease-in;
+  transition: border-color 300ms linear, -webkit-transform 400ms ease-in;
+  transition: transform 400ms ease-in, border-color 300ms linear;
+  transition: transform 400ms ease-in, border-color 300ms linear, -webkit-transform 400ms ease-in;
+  z-index: 14;
+  border: 1px solid transparent;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+  padding: 0.5em;
+}
+
+.btn-large:hover {
+  -webkit-transform: scale(1.7);
+          transform: scale(1.7);
+  border-color: #fff;
+}
+/*# sourceMappingURL=style.css.map */
